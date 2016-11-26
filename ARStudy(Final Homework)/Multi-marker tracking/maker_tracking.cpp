@@ -154,6 +154,8 @@ void processVideoCapture(void)
 {
 	cv::Mat grayImg;
 
+	double markerDist[2][3] = { 0 };
+
 	///< Ä«¸Þ¶ó·ÎºÎÅÍ ¿µ»óÈ¹µæ
 	gVideoCapture >> gSceneImg;
 
@@ -219,9 +221,16 @@ void processVideoCapture(void)
 				static cv::Mat changeCoord(4, 4, CV_64FC1, changeCoordArray);
 
 				E[k] = changeCoord * E[k];
+				
+				markerDist[k][0] = T.at<double>(0);
+				markerDist[k][1] = T.at<double>(1);
+				markerDist[k][1] = T.at<double>(2);
 			}
 		}
 	}
+
+	double dist = sqrt(pow(markerDist[0][0] - markerDist[1][0], 2) + pow(markerDist[0][1] - markerDist[1][1], 2) + pow(markerDist[0][2] - markerDist[1][2], 2));
+	cout << dist << endl;
 
 	if (gSceneImg.data)
 		cv::flip(gSceneImg, gOpenGLImg[0], 0);
@@ -246,6 +255,8 @@ void display(void)
 		cv::Mat E1;
 		E1 = E[k].t();
 
+		double * a = (double *)E1.data;
+		
 		glMultMatrixd((double *)E1.data);
 		glLineWidth(2.0f);
 		glBegin(GL_LINES);
@@ -258,13 +269,14 @@ void display(void)
 			glRotated(0.0, 1.0, 0.0, 0.0);
 		else
 			glRotated(-90.0, 1.0, 0.0, 0.0);
+
 		glLineWidth(1.0f);
 		glColor3f(1.0f, 1.0f, 0.0);
 		///< ¸¶Ä¿ ÁÂÇ¥°èÀÇ Áß½É¿¡¼­ °´Ã¼ ·»´õ¸µ
 		if (k == 0)
-			glutSolidCube(3);
+			glutSolidCube(0.1);
 		else
-			glutSolidTeapot(3);
+			glutSolidTeapot(0.1);
 	}
 
 	glutSwapBuffers();
