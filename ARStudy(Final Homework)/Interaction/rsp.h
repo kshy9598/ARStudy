@@ -10,7 +10,8 @@ const int scissors_high = 29;
 
 //º¸ ¹üÀ§
 const int paper_low = 31;
-const int paper_high = 41;
+//const int paper_high = 41;
+const int paper_high = 70;
 
 enum rsp { rock, scissors, paper, none };
 

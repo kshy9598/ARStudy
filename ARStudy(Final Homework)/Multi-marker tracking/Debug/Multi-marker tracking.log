@@ -1,4 +1,4 @@
-﻿빌드 시작: 2016-11-26 오전 1:13:12
+﻿빌드 시작: 2016-11-29 오후 4:51:55
      1>2 노드의 "C:\Users\kshy9\AR\ARStudy(Final Homework)\Multi-marker tracking\Multi-marker tracking.vcxproj" 프로젝트(Build 대상)입니다.
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I./../../opencv/build/include /I./GL /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp maker_tracking.cpp
@@ -21,4 +21,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:04.66
+경과 시간: 00:00:05.39

@@ -243,9 +243,6 @@ void processVideoCapture(void)
 	if (timer == 11){
 		rspdata = image_processing(gSceneImg, box);
 
-		if (rspdata != rock)
-			degree = 0;
-
 		if (rspdata == scissors){
 			objColor += 1;
 			objColor %= 3;
@@ -295,11 +292,14 @@ void display(void)
 			glRotated(-90.0, 1.0, 0.0, 0.0);
 		glLineWidth(1.0f);
 
-		if (rspdata == rock){
-			if (k == 0)
-				glTranslated(3 * sin(degree), 3 * cos(degree), 0.0);
-			if (k == 1)
-				glTranslated(3 * sin(-degree), 0.0, 3 * cos(-degree));
+
+		if (k == 0){
+			//glRotated(degree * 30, 0.0, 0.0, 1.0);
+			glTranslated(3 * sin(degree), 3 * cos(degree), 0.0);
+		}
+		if (k == 1){
+			//glRotated(-degree * 30, 0.0, 1.0, 0.0);
+			glTranslated(3 * sin(-degree/2), 0.0, 3 * cos(-degree));
 		}
 
 		///< ¸¶Ä¿ ÁÂÇ¥°èÀÇ Áß½É¿¡¼­ °´Ã¼ ·»´õ¸µ

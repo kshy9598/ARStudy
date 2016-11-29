@@ -12,7 +12,7 @@ const int zFar = 1000000;
 const int FRAME_WIDTH = 640;
 const int FRAME_HEIGHT = 480;
 
-const int objectSize = 2;
+const double objectSize = 1.5;
 const double PI = 3.14159265359;
 
 const std::string nmarker[] = { "./picture/nexen.png", "./picture/pringles.jpg" };

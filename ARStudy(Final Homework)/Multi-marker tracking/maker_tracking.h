@@ -12,7 +12,7 @@ const int zFar = 1000000;
 const int FRAME_WIDTH = 640;
 const int FRAME_HEIGHT = 480;
 
-const std::string nmarker[] = { "./picture/1.jpg", "./picture/2.jpg" };
+const std::string nmarker[] = { "./picture/nexen.png", "./picture/pringles.jpg" };
 
 void init(void);
 void convertFromCaemraToOpenGLProjection(double* mGL);
