@@ -19,4 +19,4 @@ using namespace std;
 #include "GL/GLAUX.H"
 
 #include "opencv2\opencv.hpp"
-#pragma comment(lib, "opencv_world300d.lib")
+#pragma comment(lib, "opencv_world300.lib")

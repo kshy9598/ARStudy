@@ -80,12 +80,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="maker_tracking.cpp" />
+    <ClCompile Include="marker_tracking.cpp" />
     <ClCompile Include="rsp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />
-    <ClInclude Include="maker_tracking.h" />
+    <ClInclude Include="marker_tracking.h" />
     <ClInclude Include="rsp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

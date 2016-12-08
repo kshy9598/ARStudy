@@ -1,4 +1,4 @@
-#include "maker_tracking.h"
+#include "marker_tracking.h"
 
 int main(int argc, char** argv)
 {
@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 	glutCreateWindow("AR Homework");
 
 	init();
-
+		
 	glutDisplayFunc(display);
 	glutIdleFunc(idle);
 	glutReshapeFunc(reshape);
